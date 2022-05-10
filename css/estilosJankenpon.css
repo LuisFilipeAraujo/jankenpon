@@ -1,17 +1,17 @@
 @charset "UTF-8";
 
 h1{
-	font-size: 6vw; /*responsivo*/
+	font-size: 3vw; /*responsivo*/
 	text-align: center;
-	color: rgb(210,105,30);
+	color: rgb(110, 17, 13);
 	
 	padding-top:0px;
 	}
 	
 h2{
-	font-size: 3vw; 
+	font-size: 1vw; 
 	text-align: center;
-	color: rgb(205,133,63);
+	color: rgb(99, 16, 11);
 	
 	padding: 0px;
 	}
@@ -20,7 +20,7 @@ body{
 	Font-family: Arial;
 	font-size: 2.0vw;
 	padding:0px;
-	background-color: rgb(242,237,215);
+	background-color: rgb(160, 73, 62);
 	}
 	
 
