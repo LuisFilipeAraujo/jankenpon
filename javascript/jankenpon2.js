@@ -1,6 +1,6 @@
-const userChoiceDisplay = document.createElement('h1')
-const computerChoiceDisplay = document.createElement('h1')
-const resultDisplay = document.createElement('h1')
+const userChoiceDisplay = document.createElement('h2')
+const computerChoiceDisplay = document.createElement('h2')
+const resultDisplay = document.createElement('h2')
 const gameGrid = document.getElementById('game')
 gameGrid.append(userChoiceDisplay, computerChoiceDisplay, resultDisplay)
 

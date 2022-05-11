@@ -3,17 +3,17 @@
 h1{
 	font-size: 3vw; /*responsivo*/
 	text-align: center;
-	color: rgb(110, 17, 13);
+	color: rgb(246, 246, 246);
 	
-	padding-top:0px;
+	padding-top:6px;
 	}
 	
 h2{
-	font-size: 1vw; 
+	font-size: 2.2vw; 
 	text-align: center;
-	color: rgb(99, 16, 11);
+	color: rgb(143, 20, 14);
 	
-	padding: 0px;
+	padding: 1px;
 	}
 	
 body{
@@ -21,9 +21,23 @@ body{
 	font-size: 2.0vw;
 	padding:0px;
 	background-color: rgb(160, 73, 62);
+	text-shadow:#000 2px 2px 2px;
 	}
 	
 
+	button{
+	Font-family: Arial;
+	font-size: 3.0vw;
+	padding:10px;
+	color: rgb(237, 225, 225);
+	background-color: rgb(93, 22, 12);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	
+	}
 	
 	a:link, a:visited{
 	text-decoration:none;
@@ -42,11 +56,6 @@ body{
 	color:green;
 	}
 
-	video {
-		width: 100%;
-		height: auto;
-	  }
-
 .inicio{
     text-align:center;
     position: sticky;
@@ -54,39 +63,21 @@ body{
 	left: 0px;
 	padding: 0px;
     margin: 0px;
-	background-image: url("../img/fundo_ini.jpg");
-    background-size: cover;
     
-    text-shadow:#000 2px 1px 1px; /*efeito de sombra no texto*/
+    text-shadow:#000 4px 4px 4px; /*efeito de sombra no texto*/
 }
 
 .text{
-    background-color: rgba(0, 12, 44, 0.4);
+    background-color: rgba(30, 2, 2, 1);
 }
 
 .responsive {
-	
 	height: auto;
-	flex-basis: 40%
+	flex-basis: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
   }
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center
-}
-
-.image {
-
-  /*flex-basis: 40%;*/
-  float:left;
-}
-.Ad{
-	float:right;
-	padding:0px;
-	text-align:left;
-}
-
 
 * Mobile */
 [class*="col-"]{
