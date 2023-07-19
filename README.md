@@ -4,3 +4,6 @@ Buttons "Spock" AND "Lizard" were added later.
 
 
 https://jankenpon-production.up.railway.app
+
+
+https://luisfilipearaujo.github.io/jankenpon/
