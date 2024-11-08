@@ -1,32 +1,35 @@
-const userChoiceDisplay = document.createElement('h2')
-const computerChoiceDisplay = document.createElement('h2')
-const resultDisplay = document.createElement('h2')
-const gameGrid = document.getElementById('game')
-gameGrid.append(userChoiceDisplay, computerChoiceDisplay, resultDisplay)
+const userChoiceDisplay = document.createElement('h2');
+const computerChoiceDisplay = document.createElement('h2');
+const resultDisplay = document.createElement('h2');
+const gameGrid = document.getElementById('game');
+const resultsContainer = document.getElementById('results');
 
-const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock']
-let userChoice
-let computerChoice
+// Adiciona as áreas de resultados na div #results
+resultsContainer.append(userChoiceDisplay, computerChoiceDisplay, resultDisplay);
+
+const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+let userChoice;
+let computerChoice;
 
 const handleClick = (e) => {
-  userChoice = e.target.id
-  userChoiceDisplay.innerHTML = 'User choice: ' + userChoice
-  generateComputerChoice()
-  getResult()
+  userChoice = e.target.id;
+  userChoiceDisplay.innerHTML = 'User choice: ' + userChoice;
+  generateComputerChoice();
+  getResult();
 }
 
 const generateComputerChoice = () => {
-  const randomChoice = choices[Math.floor(Math.random() * choices.length)]
-  computerChoice = randomChoice
-  computerChoiceDisplay.innerHTML = 'Computer choice: ' + computerChoice
+  const randomChoice = choices[Math.floor(Math.random() * choices.length)];
+  computerChoice = randomChoice;
+  computerChoiceDisplay.innerHTML = 'Computer choice: ' + computerChoice;
 }
 
 for (let i = 0; i < choices.length; i++) {
-  const button = document.createElement('button')
-  button.id = choices[i] // you can delete this id you want to use e.target.HTML in the handleClick
-  button.innerHTML = choices[i]
-  button.addEventListener('click', handleClick)
-  gameGrid.appendChild(button)
+  const button = document.createElement('button');
+  button.id = choices[i]; 
+  button.innerHTML = choices[i];
+  button.addEventListener('click', handleClick);
+  gameGrid.appendChild(button);
 }
 
 const getResult = () => {
@@ -41,8 +44,8 @@ const getResult = () => {
     case 'lizardpaper':
     case 'spockscissors':
     case 'spockrock':
-      resultDisplay.innerHTML = "YOU WIN!"
-      break
+      resultDisplay.innerHTML = "YOU WIN!";
+      break;
 
     case 'paperscissors':
     case 'paperlizard':
@@ -54,20 +57,20 @@ const getResult = () => {
     case 'lizardrock':
     case 'spocklizard':
     case 'spockpaper':
-      resultDisplay.innerHTML = "YOU LOSE!"
-      break
+      resultDisplay.innerHTML = "YOU LOSE!";
+      break;
 
     case 'paperpaper':
     case 'scissorsscissors':
     case 'rockrock':
     case 'lizardlizard':
     case 'spockspock':
-    resultDisplay.innerHTML = "ITS A DRAW!"
-    break
+      resultDisplay.innerHTML = "ITS A DRAW!";
+      break;
   }
 }
 
-var myVideo = document.getElementById("video1"); 
+var myVideo = document.getElementById("video1");
 
 function playPause() { 
   if (myVideo.paused) 
@@ -86,4 +89,4 @@ function makeSmall() {
 
 function makeNormal() { 
     myVideo.width = 420; 
-} 
+}
