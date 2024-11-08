@@ -1,124 +1,132 @@
 @charset "UTF-8";
 
-h1{
-	font-size: 3vw; /*responsivo*/
-	text-align: center;
-	color: rgb(246, 246, 246);
-	
-	padding-top:6px;
-	}
-	
-h2{
-	font-size: 2.2vw; 
-	text-align: center;
-	color: rgb(143, 20, 14);
-	
-	padding: 1px;
-	}
-	
-body{
-	Font-family: Arial;
-	font-size: 2.0vw;
-	padding:0px;
-	background-color: rgb(160, 73, 62);
-	text-shadow:#000 2px 2px 2px;
-	}
-	
+h1 {
+    font-size: 3vw;
+    text-align: center;
+    color: rgb(246, 246, 246);
+    padding-top: 6px;
+}
 
-	button{
-	Font-family: Arial;
-	font-size: 3.0vw;
-	padding:10px;
-	color: rgb(237, 225, 225);
-	background-color: rgb(93, 22, 12);
-	display: flex;
-	align-items: center;
+h2 {
+    font-size: 2.2vw;
+    text-align: center;
+    color: rgb(143, 20, 14);
+    padding: 1px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 2.0vw;
+    padding: 0;
+    background-color: rgb(160, 73, 62);
+    text-shadow: #000 2px 2px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+#game {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 10px; 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    font-size: 3vw;
+    color: rgb(237, 225, 225);
+    background-color: rgb(93, 22, 12);
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 250px;
+    height: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgb(143, 20, 14);
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    z-index: 0;
+}
+
+#video1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; 
+    max-width: 800px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
 	justify-content: center;
-	width: 100%;
-	height: auto;
-	
-	}
-	
-	a:link, a:visited{
-	text-decoration:none;
-	color: green;
-	font-size:170%;
-	}
-	
-	a:hover {
-	text-decoration: underline; 
-	color: #f00;
-	font-size:190%;
-	}
-	
-	a:active {
-	text-decoration: none;
-	color:green;
-	}
-
-.inicio{
-    text-align:center;
+    align-items: center;
+}
+.inicio {
+    text-align: center;
     position: sticky;
-	top: 0px;
-	left: 0px;
-	padding: 0px;
-    margin: 0px;
-    
-    text-shadow:#000 4px 4px 4px; /*efeito de sombra no texto*/
-}
-
-.text{
-    background-color: rgba(30, 2, 2, 1);
-}
-
-.responsive {
-	height: auto;
+    top: 0; 
+    left: 0;
+    margin: 0;
+    background-color: rgba(30, 2, 2, 1); 
+    z-index: 10;
 	width: 100%;
-	display: flex;
-	align-items: center;
+}
+
+.responsive-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 	justify-content: center;
-  }
-
-  video {
-	width: 100%;
-	height: auto;
-  }
-
-  
-* Mobile */
-[class*="col-"]{
-    float: left;
-    width: 100%;
+    align-items: center;
 }
 
-/* Tablets */
-@media only screen and (min-width: 600px){
-    .col-s-1{width:8.33%;}
-    .col-s-2{width:16.66%;}
-    .col-s-3{width:25%;}
-    .col-s-4{width:33.33%;}
-    .col-s-5{width:41.66%;}
-    .col-s-6{width:50%;}
-    .col-s-7{width:58.33%;}
-    .col-s-8{width:66.66%;}
-    .col-s-9{width:75%;}
-    .col-s-10{width:83.33%;}
-    .col-s-11{width:91.66%;}
-    .col-s-12{width:100%;}
+@media only screen and (max-width: 600px) {
+    
+
+    button {
+        font-size: 4vw;
+        max-width: 150px;
+    }
 }
 
-/* Tablets */
-@media only screen and (min-width: 768px){
-    .col-1{width:8.33%;}
-    .col-2{width:16.66%;}
-    .col-3{width:25%;}
-    .col-4{width:33.33%;}
-    .col-5{width:41.66%;}
-    .col-6{width:50%;}
-    .col-7{width:58.33%;}
-    .col-8{width:66.66%;}
-    .col-9{width:75%;}
-    .col-10{width:83.33%;}
-    .col-11{width:91.66%;}
-    .col-12{width:100%;}
+/* Responsividade para telas médias */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+   
+    button {
+        font-size: 3.5vw;
+    }
+}
+
+/* Responsividade para telas grandes */
+@media only screen and (min-width: 768px) {
+
+	button {
+        font-size: 3vw;
+        max-width: 250px;
+    }
 }
